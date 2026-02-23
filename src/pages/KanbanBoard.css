@@ -1,0 +1,60 @@
+.board-page {
+  padding: 24px 24px 0;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.board-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.board-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.board-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.board-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  width: auto;
+  padding: 9px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .board-header {
+    flex-direction: column;
+  }
+}

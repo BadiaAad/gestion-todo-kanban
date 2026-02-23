@@ -1,43 +1,61 @@
 {
-"users": [
-{
-"id": 1,
-"username": "sara",
-"avatar": "https://ui-avatars.com/api/?name=sara" },
-{
-"id": 2,
-"username": "youssef",
-"avatar": "https://ui-avatars.com/api/?name=youssef"
+  "users": [
+    {
+      "id": 1,
+      "username": "sara",
+      "avatar": "https://ui-avatars.com/api/?name=sara&background=6366f1&color=fff"
+    },
+    {
+      "id": 2,
+      "username": "youssef",
+      "avatar": "https://ui-avatars.com/api/?name=youssef&background=f59e0b&color=fff"
+    },
+    {
+      "id": 3,
+      "username": "amina",
+      "avatar": "https://ui-avatars.com/api/?name=amina&background=10b981&color=fff"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Apprendre Redux",
+      "description": "Comprendre reducers, actions et store. Pratiquer avec des exemples concrets.",
+      "status": "done",
+      "priority": "high",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Configurer JSON Server",
+      "description": "Créer un faux backend REST pour simuler les appels API.",
+      "status": "in-progress",
+      "priority": "medium",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "title": "Créer les composants React",
+      "description": "Implémenter les composants KanbanBoard, TaskCard, et les pages.",
+      "status": "in-progress",
+      "priority": "high",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "title": "Implémenter le Drag & Drop",
+      "description": "Utiliser @hello-pangea/dnd pour le déplacement des tâches entre colonnes.",
+      "status": "todo",
+      "priority": "medium",
+      "userId": 3
+    },
+    {
+      "id": 5,
+      "title": "Styling avec Tailwind",
+      "description": "Appliquer un design professionnel avec des animations et une palette cohérente.",
+      "status": "todo",
+      "priority": "low",
+      "userId": 2
+    }
+  ]
 }
-],
-"tasks": [
-{
-"id": 1,
-"title": "Apprendre Redux",
-"description": "Comprendre reducers, actions et store",
-"status": "todo",
-"priority": "high",
-"userId": 1
-},
-{
-"id": 2,
-"title": "Configurer JSON Server",
-"description": "Créer un faux backend",
-"status": "in-progress",
-"priority": "medium",
-"userId": 2
-}
-]
-}
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,5 @@
-
+ # npm install @hello-pangea/dnd
+ # "server": "json-server --watch db.json --port 3001"
 # KanbanFlow — Application de Gestion de Tâches
 
 Une application Kanban complète avec Drag & Drop, construite avec React, Redux Toolkit et JSON Server.

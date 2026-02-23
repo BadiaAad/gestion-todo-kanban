@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchTasks } from './store/tasksSlice';
+import { fetchUsers } from './store/usersSlice';
+import Navbar from './components/Navbar';
+import KanbanBoard from './pages/KanbanBoard';
+import TaskNew from './pages/TaskNew';
+import TaskDetail from './pages/TaskDetail';
+import TaskEdit from './pages/TaskEdit';
+import UsersPage from './pages/UsersPage';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTasks());
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<KanbanBoard />} />
+        <Route path="/tasks/new" element={<TaskNew />} />
+        <Route path="/task/:id" element={<TaskDetail />} />
+        <Route path="/task/:id/edit" element={<TaskEdit />} />
+        <Route path="/users" element={<UsersPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

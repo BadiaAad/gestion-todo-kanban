@@ -1,5 +1,90 @@
-# Getting Started with Create React App
 
+# KanbanFlow — Application de Gestion de Tâches
+
+Une application Kanban complète avec Drag & Drop, construite avec React, Redux Toolkit et JSON Server.
+
+##  Fonctionnalités
+
+- **Tableau Kanban** avec 3 colonnes : To Do, In Progress, Done
+- **Drag & Drop** pour déplacer les tâches entre colonnes
+- **Gestion complète des tâches** : créer, modifier, supprimer, voir les détails
+- **Gestion des utilisateurs** : ajouter, supprimer, assigner aux tâches
+- **Filtres bonus** : par utilisateur et par priorité
+
+## Technologies
+
+- React 18
+- Redux Toolkit
+- React Router v6
+- JSON Server (API simulée)
+- Axios
+- @hello-pangea/dnd (Drag & Drop)
+
+##  Installation
+
+```bash
+
+npm install
+
+
+npm install -g json-server
+```
+
+## Lancement
+
+Ouvrir **deux terminaux** :
+
+```bash
+
+json-server --watch db.json --port 3001
+
+
+npm start
+```
+
+- App React : http://localhost:3000
+- API JSON Server : http://localhost:3001
+
+##  Structure du projet
+
+```
+src/
+├── store/
+│   ├── index.js          # Configuration du store Redux
+│   ├── tasksSlice.js     # Reducer + actions async des tâches
+│   └── usersSlice.js     # Reducer + actions async des utilisateurs
+├── selectors/
+│   ├── tasksSelectors.js # Sélecteurs Redux (tâches)
+│   └── usersSelectors.js # Sélecteurs Redux (utilisateurs)
+├── components/
+│   ├── Navbar.jsx        # Barre de navigation
+│   ├── KanbanColumn.jsx  # Colonne du tableau Kanban
+│   └── TaskCard.jsx      # Carte de tâche (draggable)
+├── pages/
+│   ├── KanbanBoard.jsx   # Page principale (/)
+│   ├── TaskNew.jsx       # Nouvelle tâche (/tasks/new)
+│   ├── TaskDetail.jsx    # Détails tâche (/task/:id)
+│   ├── TaskEdit.jsx      # Modifier tâche (/task/:id/edit)
+│   └── UsersPage.jsx     # Utilisateurs (/users)
+└── App.js                # Routes principales
+```
+
+##  Membres de l'équipe
+
+- [Badia AAD]
+- [Maryem LAFRIKI]
+- [chaimae jouiga ]
+
+
+
+
+
+
+
+
+
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

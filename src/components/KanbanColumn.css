@@ -1,0 +1,64 @@
+.kanban-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: calc(100vh - 130px);
+}
+
+.column-header {
+  padding: 16px 16px 0;
+  position: relative;
+}
+
+.column-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.column-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.column-title {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  flex: 1;
+}
+
+.column-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.column-accent {
+  height: 2px;
+  border-radius: 1px;
+  margin: 0 -16px;
+  opacity: 0.7;
+}
+
+.column-body {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  transition: background 0.2s;
+}
+
+.column-body.drag-over {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
